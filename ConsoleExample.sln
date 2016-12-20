@@ -20,4 +20,12 @@ Global
 		{C8FAE202-77CC-4363-BB2F-5DBF93B2B2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8FAE202-77CC-4363-BB2F-5DBF93B2B2A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+	EndGlobalSection
 EndGlobal
