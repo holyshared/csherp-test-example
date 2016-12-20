@@ -1,5 +1,7 @@
 # csherp-test-example
 
+[![Build status](https://ci.appveyor.com/api/projects/status/r2atg1k4l6g1yl0d/branch/master?svg=true)](https://ci.appveyor.com/project/holyshared/csherp-test-example/branch/master)
+
 ## Environment
 
 * macOS Sierra
