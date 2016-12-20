@@ -1,0 +1,9 @@
+.DS_Store
+
+ConsoleExample/bin
+ConsoleExample/obj
+
+ConsoleExampleTest/bin
+ConsoleExampleTest/obj
+
+packages
