@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B33327B6-6973-4643-AF4E-36C1E6E7DDA2}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ConsoleExampleTest</RootNamespace>
-    <AssemblyName>ConsoleExampleTest</AssemblyName>
+    <RootNamespace>ExampleClientTest</RootNamespace>
+    <AssemblyName>ExampleClientTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,9 +33,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleExample\ConsoleExample.csproj">
+    <ProjectReference Include="..\ExampleClient\ExampleClient.csproj">
       <Project>{C8FAE202-77CC-4363-BB2F-5DBF93B2B2A8}</Project>
-      <Name>ConsoleExample</Name>
+      <Name>ExampleClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
