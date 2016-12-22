@@ -1,7 +1,7 @@
-﻿namespace ConsoleExampleTest
+﻿namespace ExampleClientTest
 {
 	using NUnit.Framework;
-	using ConsoleExample;
+	using ExampleClient;
 
 	[TestFixture]
 	public class ClientTest

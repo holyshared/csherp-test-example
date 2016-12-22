@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace ConsoleExample
+namespace ExampleClient
 {
 	public class Client
 	{

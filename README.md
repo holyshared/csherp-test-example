@@ -23,26 +23,26 @@
 
 ### Build for Debug
 
-	xbuild ConsoleExample.sln
-	xbuild ConsoleExample/ConsoleExample.csproj
-	xbuild ConsoleExampleTest/ConsoleExampleTest.csproj
+	xbuild Example.sln
+	xbuild ExampleClient/ExampleClient.csproj
+	xbuild ExampleClientTest/ExampleClientTest.csproj
 
 ### Build for Release
 
-	xbuild /p:Configuration=Release ConsoleExample.sln
-	xbuild /p:Configuration=Release ConsoleExample/ConsoleExample.csproj
-	xbuild /p:Configuration=Release ConsoleExampleTest/ConsoleExampleTest.csproj
+	xbuild /p:Configuration=Release Example.sln
+	xbuild /p:Configuration=Release ExampleClient/ExampleClient.csproj
+	xbuild /p:Configuration=Release ExampleClientTest/ExampleClientTest.csproj
 
 ## Tests
 
 ### Tests for Debug
 
-	nunit-console ConsoleExampleTest/bin/Debug/ConsoleExampleTest.dll
+	nunit-console ExampleClientTest/bin/Debug/ExampleClientTest.dll
 
 ### Tests for Release
 
-	nunit-console ConsoleExampleTest/bin/Release/ConsoleExampleTest.dll
+	nunit-console ExampleClientTest/bin/Release/ExampleClientTest.dll
 
 ## Packaging for NuGet
 
-	mono ~/bin/nuget.exe pack ConsoleExample/ConsoleExample.csproj -properties Configuration=Release -outputdirectory .
+	mono /Users/holyshared/bin/nuget.exe pack ExampleClient/ExampleClient.csproj -properties Configuration=Release -outputdirectory .

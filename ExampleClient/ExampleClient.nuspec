@@ -9,12 +9,12 @@
     <licenseUrl>https://github.com/holyshared/csherp-test-example/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/holyshared/csherp-test-example</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>ConsoleExample</description>
+    <description>ExampleClient</description>
     <releaseNotes>Example package for macOS</releaseNotes>
     <copyright>Copyright 2016 Noritaka Horio</copyright>
-    <tags>C# Example</tags>
+    <tags>C# ExampleClient</tags>
   </metadata>
   <files>
-    <file src="bin\$configuration$\$id$.dll" target="lib/ConsoleExample" />
+    <file src="bin\$configuration$\$id$.dll" target="lib/ExampleClient" />
   </files>
 </package>

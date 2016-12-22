@@ -1,9 +1,11 @@
 .DS_Store
 
-ConsoleExample/bin
-ConsoleExample/obj
+ExampleClient/bin
+ExampleClient/obj
 
-ConsoleExampleTest/bin
-ConsoleExampleTest/obj
+ExampleClientTest/bin
+ExampleClientTest/obj
 
 packages
+
+TestResult.xml
