@@ -15,6 +15,6 @@
     <tags>C# ExampleClient</tags>
   </metadata>
   <files>
-    <file src="bin\$configuration$\$id$.dll" target="lib/ExampleClient" />
+    <file src="bin\$configuration$\$id$.dll" target="lib/net45/$id$" />
   </files>
 </package>
