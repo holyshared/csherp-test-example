@@ -9,7 +9,15 @@
 
 ## Setup
 
+### Install Mono Framework
+
 	brew install mono
+
+### Install NuGet
+
+	mkdir ~/bin
+	cd bin
+	wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 
 ## Build
 
@@ -34,3 +42,7 @@
 ### Tests for Release
 
 	nunit-console ConsoleExampleTest/bin/Release/ConsoleExampleTest.dll
+
+## Packaging for NuGet
+
+	mono ~/bin/nuget.exe pack ConsoleExample/ConsoleExample.csproj -properties Configuration=Release -outputdirectory .

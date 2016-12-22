@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Noritaka Horio</authors>
+    <owners>Noritaka Horio</owners>
+    <licenseUrl>https://github.com/holyshared/csherp-test-example/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/holyshared/csherp-test-example</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ConsoleExample</description>
+    <releaseNotes>Example package for macOS</releaseNotes>
+    <copyright>Copyright 2016 Noritaka Horio</copyright>
+    <tags>C# Example</tags>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\$id$.dll" target="lib/ConsoleExample" />
+  </files>
+</package>
