@@ -1,6 +1,6 @@
 # csherp-test-example
 
-[![Build status](https://ci.appveyor.com/api/projects/status/r2atg1k4l6g1yl0d/branch/master?svg=true)](https://ci.appveyor.com/project/holyshared/csherp-test-example/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/r4fjtv2oe2px8apq/branch/master?svg=true)](https://ci.appveyor.com/project/holyshared/csherp-test-example/branch/master)
 
 ## Environment
 
