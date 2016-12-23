@@ -27,5 +27,7 @@ Global
 		$1.ResourceNamePolicy = FileFormatDefault
 		$0.VersionControlPolicy = $2
 		$2.inheritsSet = Mono
+		version = 1.0
+		description = C# ExampleClient
 	EndGlobalSection
 EndGlobal
