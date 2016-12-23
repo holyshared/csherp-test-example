@@ -10,3 +10,15 @@ artifacts:
     name: NuGet package
   - path: 'ExampleClient\bin\Release\**\*.dll'
     name: Dynamic link library
+
+nuget:
+  account_feed: true
+  project_feed: true
+
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: h3NF5jE2LHIE5Cuotq1A3rPi7hFwVCCa6LdLbK0Ttxg=
+    skip_symbols: true
+    server: https://ci.appveyor.com/nuget/holyshared-5jt22p7viwxw
+    artifact: /ExampleClient.*\.nupkg/
