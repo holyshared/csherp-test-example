@@ -5,10 +5,10 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("ExampleClient")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyDescription("Example client description")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCompany("Noritaka Horio")]
+[assembly: AssemblyProduct("ExampleClient")]
 [assembly: AssemblyCopyright("${AuthorCopyright}")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
