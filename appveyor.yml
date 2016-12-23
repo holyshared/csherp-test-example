@@ -22,3 +22,8 @@ deploy:
     skip_symbols: true
     server: https://ci.appveyor.com/nuget/holyshared-5jt22p7viwxw
     artifact: /ExampleClient.*\.nupkg/
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      secure: 49QkzF75Ru6N4dnfcMO6K9aJYsWumjh+wUx+8Nwo2O5rP95+bDgR3J0/OYpan4oPJeMI89oe8ynwWIaMWbU6hkDBfVMPSEBM6n5EUPRClYs=
