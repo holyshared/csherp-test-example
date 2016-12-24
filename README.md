@@ -45,4 +45,4 @@
 
 ## Packaging for NuGet
 
-	mono /Users/holyshared/bin/nuget.exe pack ExampleClient/ExampleClient.csproj -properties Configuration=Release -outputdirectory .
+	mono ~/bin/nuget.exe pack ExampleClient/ExampleClient.csproj -properties Configuration=Release -outputdirectory .
