@@ -22,6 +22,16 @@ deploy:
     skip_symbols: true
     server: https://ci.appveyor.com/nuget/holyshared-5jt22p7viwxw
     artifact: /ExampleClient.*\.nupkg/
+  - provider: GitHub
+    description: ''
+    auth_token:
+      secure: 5BACOnTzglTUgXtoo59lfh+OSNROGoubJ41tU6m4DwoWcsXqVHsY+ixLWKSQAbEA
+    artifact: /ExampleClient.*\.nupkg/
+    draft: false
+    prerelease: false
+    on:
+      branch: master
+      appveyor_repo_tag: true
 
 notifications:
   - provider: Slack
