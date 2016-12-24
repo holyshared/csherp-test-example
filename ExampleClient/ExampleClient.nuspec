@@ -14,7 +14,4 @@
     <copyright>Copyright 2016 Noritaka Horio</copyright>
     <tags>C# ExampleClient</tags>
   </metadata>
-  <files>
-    <file src="bin\$configuration$\$id$.dll" target="lib/net45/$id$" />
-  </files>
 </package>
