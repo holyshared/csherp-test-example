@@ -1,9 +1,18 @@
 ﻿<Properties StartupConfiguration="{B33327B6-6973-4643-AF4E-36C1E6E7DDA2}|単体テスト">
   <MonoDevelop.Ide.ItemProperties.ExampleClientTest PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ExampleClient/Properties/AssemblyInfo.cs">
-    <Files>
-      <File FileName="ExampleClient/Properties/AssemblyInfo.cs" Line="21" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Example" expanded="True" selected="True">
+            <Node name="ExampleClient" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
