@@ -1,28 +1,65 @@
+# 全体の設定を確認したい場合は、下記を参照
+# https://www.appveyor.com/docs/appveyor-yml/
+#
+# [暗号化]
+# もしかしたらCLIツールがあるかもしれないが、暗号化するにはここのページを利用する
+# https://ci.appveyor.com/tools/encrypt
+
+# ビルドする構成
+# ここではRelease用のビルド
+# x86とかの構成でビルドしたい場合は、platformを追加する
 configuration: Release
 
+# ビルドの前に依存しているパッケージをダウンロードする
 before_build:
   - nuget restore
+# ビルドに成功したら、NuGet用のパッケージを作成する
 after_build:
-  - nuget pack ExampleClient/ExampleClient.csproj -properties Configuration=Release -outputdirectory ./ExampleClient
+  - nuget pack ExampleClient/ExampleClient.csproj -symbols -properties Configuration=Release -outputdirectory ./ExampleClient
 
+# ビルドの成果物として、AppVeyorのストレージに保存する
+# ここではNuGetのパッケージと、dllを保存する
+#
+# see: https://www.appveyor.com/docs/packaging-artifacts
 artifacts:
   - path: 'ExampleClient\**\*.nupkg'
     name: NuGet package
   - path: 'ExampleClient\bin\Release\**\*.dll'
     name: Dynamic link library
 
+# NuGetのFeedソースに自動で登録するかどうか
+# see: https://www.appveyor.com/docs/nuget
 nuget:
   account_feed: true
   project_feed: true
 
 deploy:
+  # AppVeyorのNuGet用のFeedにパッケージを登録する
+  # 代わりにMyGetや自分でサーバーを立てることもできる
+  #
+  # server/symbol_serverは気を付けないと死ぬ
+  # serverを指定しない場合は、NuGet.orgに登録される
+  # symbol_serverを指定しない場合は、SymbolSource.orgに登録される
+  # 
+  # MyGet - https://www.myget.org/
+  #         $9/mからプライベートなFeedを利用できる
   - provider: NuGet
     api_key:
       secure: h3NF5jE2LHIE5Cuotq1A3rPi7hFwVCCa6LdLbK0Ttxg=
-    skip_symbols: true
     server: https://ci.appveyor.com/nuget/holyshared-5jt22p7viwxw
+    symbol_server: https://ci.appveyor.com/nuget/holyshared-5jt22p7viwxw
     artifact: /ExampleClient.*\.nupkg/
+
+  # タグを付けた場合にGitHubにビルドの成果物を添付する
+  #
+  # アクセストークンは暗号化する
+  # https://ci.appveyor.com/tools/encrypt
+  #
+  # see:
+  #   GitHub release      - https://www.appveyor.com/docs/deployment/github
+  #   Personal API tokens - https://github.com/blog/1509-personal-api-tokens
   - provider: GitHub
+    # 何かないと、GitHubが422: Unprocessable entity error.を返す
     description: ''
     auth_token:
       secure: 5BACOnTzglTUgXtoo59lfh+OSNROGoubJ41tU6m4DwoWcsXqVHsY+ixLWKSQAbEA
@@ -31,9 +68,15 @@ deploy:
     prerelease: false
     on:
       branch: master
+      # タグ付けされた場合のみ添付する、そうじゃない場合はAppVeyorでwarningぽく表示されるが
+      # 支障はないので気にしなくていいと思う
       appveyor_repo_tag: true
 
 notifications:
+  # Slackにビルド結果を通知する
+  #
+  # WebHookのURLは下記のページで暗号化する
+  # https://ci.appveyor.com/tools/encrypt
   - provider: Slack
     incoming_webhook:
       secure: 49QkzF75Ru6N4dnfcMO6K9aJYsWumjh+wUx+8Nwo2O5rP95+bDgR3J0/OYpan4oPJeMI89oe8ynwWIaMWbU6hkDBfVMPSEBM6n5EUPRClYs=

@@ -45,4 +45,10 @@
 
 ## Packaging for NuGet
 
+### Without symbol package
+
 	mono ~/bin/nuget.exe pack ExampleClient/ExampleClient.csproj -properties Configuration=Release -outputdirectory .
+
+### With symbol package
+
+	mono ~/bin/nuget.exe pack ExampleClient/ExampleClient.csproj -symbols -properties Configuration=Release -outputdirectory .
