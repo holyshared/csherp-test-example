@@ -93,9 +93,9 @@ notifications:
       {{buildUrl}}
 
 
-      *artifacts:*
       {{#jobs}}
         {{#artifacts}}
+          *artifacts:*
           • <{{url}}|{{fileName}}>
         {{/artifacts}}
       {{/jobs}}
