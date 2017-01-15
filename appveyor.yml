@@ -88,14 +88,16 @@ notifications:
 
       {{#failed}}*<{{buildUrl}}|Build {{projectName}} {{buildVersion}} failed>*{{/failed}}
 
-      Commit #{{commitId}} by {{commitAuthor}} on {{commitDate}}: {{commitMessage}}
+      Commit <https://{{repositoryProvider}}.com/{{repositoryName}}/commit/{{commitId}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}: {{commitMessage}}
 
       {{buildUrl}}
 
 
       {{#jobs}}
-        {{#artifacts}}*artifacts:*{{/artifacts}}
-        {{#artifacts}}
-          • <{{url}}|{{fileName}}>
-        {{/artifacts}}
+        {{#passed}}
+          *artifacts:*
+          {{#artifacts}}
+            • <{{url}}|{{fileName}}>
+          {{/artifacts}}
+        {{/passed}}
       {{/jobs}}
