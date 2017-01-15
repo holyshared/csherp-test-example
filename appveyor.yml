@@ -94,8 +94,10 @@ notifications:
 
 
       {{#jobs}}
-        {{#artifacts}}*artifacts:*{{/artifacts}}
-        {{#artifacts}}
-          • <{{url}}|{{fileName}}>
-        {{/artifacts}}
+        {{#passed}}
+          *artifacts:*
+          {{#artifacts}}
+            • <{{url}}|{{fileName}}>
+          {{/artifacts}}
+        {{/passed}}
       {{/jobs}}
