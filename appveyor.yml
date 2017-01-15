@@ -77,6 +77,25 @@ notifications:
   #
   # WebHookのURLは下記のページで暗号化する
   # https://ci.appveyor.com/tools/encrypt
+  #
+  # メッセージをカスタマイズする場合はここを参考にする
+  # https://www.appveyor.com/docs/notifications/#customizing-message-template
   - provider: Slack
     incoming_webhook:
       secure: 49QkzF75Ru6N4dnfcMO6K9aJYsWumjh+wUx+8Nwo2O5rP95+bDgR3J0/OYpan4oPJeMI89oe8ynwWIaMWbU6hkDBfVMPSEBM6n5EUPRClYs=
+    template: >-
+      {{#passed}}*<{{buildUrl}}|Build {{projectName}} {{buildVersion}} passed>*{{/passed}}
+
+      {{#failed}}*<{{buildUrl}}|Build {{projectName}} {{buildVersion}} failed>*{{/failed}}
+
+      Commit {{47d1fc0d93}} by {{commitAuthor}} on {{commitDate}}: {{commitMessage}}
+
+      {{buildUrl}}
+
+
+      *artifacts:*
+      {{#jobs}}
+        {{#artifacts}}
+          • <{{url}}|{{fileName}}>
+        {{/artifacts}}
+      {{/jobs}}
