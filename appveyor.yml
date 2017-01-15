@@ -88,7 +88,7 @@ notifications:
 
       {{#failed}}*<{{buildUrl}}|Build {{projectName}} {{buildVersion}} failed>*{{/failed}}
 
-      Commit {{47d1fc0d93}} by {{commitAuthor}} on {{commitDate}}: {{commitMessage}}
+      Commit {{commitId}} by {{commitAuthor}} on {{commitDate}}: {{commitMessage}}
 
       {{buildUrl}}
 
