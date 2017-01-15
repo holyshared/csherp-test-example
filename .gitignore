@@ -9,3 +9,5 @@ ExampleClientTest/obj
 packages
 
 TestResult.xml
+
+*.userprefs
