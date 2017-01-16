@@ -86,7 +86,7 @@ notifications:
     template: |-
       <{{buildUrl}}|Build {{projectName}} {{buildVersion}} {{status}}>
       Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}:
-      _{{commitMessage}}_
+      _{{{commitMessage}}}_
 
       {{buildUrl}}
 
