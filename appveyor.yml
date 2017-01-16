@@ -83,15 +83,12 @@ notifications:
   - provider: Slack
     incoming_webhook:
       secure: 49QkzF75Ru6N4dnfcMO6K9aJYsWumjh+wUx+8Nwo2O5rP95+bDgR3J0/OYpan4oPJeMI89oe8ynwWIaMWbU6hkDBfVMPSEBM6n5EUPRClYs=
-    template: >-
-      {{#passed}}*<{{buildUrl}}|Build {{projectName}} {{buildVersion}} passed>*{{/passed}}
-
-      {{#failed}}*<{{buildUrl}}|Build {{projectName}} {{buildVersion}} failed>*{{/failed}}
-
-      Commit <https://{{repositoryProvider}}.com/{{repositoryName}}/commit/{{commitId}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}: {{commitMessage}}
+    template: |-
+      <{{buildUrl}}|Build {{projectName}} {{buildVersion}} {{status}}>
+      Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}:
+      _{{commitMessage}}_
 
       {{buildUrl}}
-
 
       {{#jobs}}
         {{#passed}}
